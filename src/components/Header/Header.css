@@ -1,0 +1,34 @@
+.bg-lightgrey {
+  background: rgba(155, 154, 154, 0.925);
+}
+.top-nav {
+  background: #07294d;
+  line-height: 50px;
+  color: #b4c4c6;
+  font-weight: bold;
+}
+.header-top-btn {
+  color: #d7973e;
+  font-weight: bold;
+}
+.header-top-btn:hover {
+  color: white;
+}
+.font-icon {
+  cursor: pointer;
+}
+.fb-icon:hover {
+  color: rgba(31, 31, 231, 0.938);
+}
+.yt-icon:hover {
+  color: red;
+}
+.tw-icon:hover {
+  color: rgb(106, 194, 248);
+}
+.in-icon:hover {
+  color: #3f729b;
+}
+.ln-icon:hover {
+  color: #0e76a8;
+}
