@@ -32,3 +32,13 @@
 .ln-icon:hover {
   color: #0e76a8;
 }
+
+.nav-menu-bg {
+  background: white;
+}
+.nav-menu-clr {
+  color: #07294d !important;
+}
+.nav-menu-clr:hover {
+  color: #e4921f !important;
+}

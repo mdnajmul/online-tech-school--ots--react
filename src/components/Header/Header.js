@@ -13,6 +13,7 @@ import {
   faEnvelope,
   faPhoneAlt,
   faSearch,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -73,12 +74,12 @@ const Header = () => {
         </div>
       </div>
       <div>
-        <Navbar className="bg-lightgrey" variant="dark">
+        <Navbar className="bg-lightgrey nav-menu-bg" variant="dark">
           <Container>
             <Navbar.Brand href="#home">
               <img
                 src="./logo.png"
-                width="120"
+                width="100"
                 height="70"
                 style={{ fontWeight: "bold" }}
                 f-w
@@ -86,42 +87,50 @@ const Header = () => {
                 alt="React Bootstrap logo"
               />
             </Navbar.Brand>
-            <Navbar.Brand className="me-auto fw-bold">
+            <Navbar.Brand className="me-auto fw-bold nav-menu-clr">
               Online Tech School
             </Navbar.Brand>
             <InputGroup className="w-25 me-auto">
               <FormControl
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
+                placeholder="type here to search"
+                aria-label="type here to search"
+                aria-describedby="search-btn"
               />
-              <Button variant="outline-secondary" id="button-addon2">
+              <Button variant="outline-info" id="search-btn">
                 <FontAwesomeIcon icon={faSearch} />
               </Button>
             </InputGroup>
             <Nav className="me-0 fw-bold">
               <NavLink
-                className="text-decoration-none me-5 text-white"
+                className="text-decoration-none me-5 nav-menu-clr"
                 to="/home"
+                active
               >
                 Home
               </NavLink>
               <NavLink
-                className="text-decoration-none me-5 text-white"
+                className="text-decoration-none me-5 nav-menu-clr"
                 to="/courses"
               >
                 Courses
               </NavLink>
               <NavLink
-                className="text-decoration-none me-5 text-white"
+                className="text-decoration-none me-5 nav-menu-clr"
                 to="/about"
               >
                 About Us
               </NavLink>
-              <NavLink className="text-decoration-none text-white" to="/shop">
+              <NavLink className="text-decoration-none nav-menu-clr" to="/shop">
                 Shop
               </NavLink>
             </Nav>
+            <span className="text-warning fw-bold ms-3 mt-1">
+              <FontAwesomeIcon
+                className="font-icon me-2"
+                icon={faShoppingCart}
+              ></FontAwesomeIcon>
+              0
+            </span>
           </Container>
         </Navbar>
       </div>
