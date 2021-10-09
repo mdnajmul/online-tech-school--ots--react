@@ -266,6 +266,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="footer-bottom">
+        <div className="container d-flex justify-content-between pt-4 pb-3">
+          <p className="text-white fw-bold">
+            &copy; Copyrights {new Date().getFullYear()} Online Tech School All
+            rights reserved.
+          </p>
+          <p className="text-white fw-bold">Designed by najmulovi</p>
+        </div>
+      </div>
     </div>
   );
 };
