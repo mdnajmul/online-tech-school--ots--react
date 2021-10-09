@@ -16,9 +16,10 @@
 }
 .font-icon {
   cursor: pointer;
+  color: white;
 }
 .fb-icon:hover {
-  color: rgba(31, 31, 231, 0.938);
+  color: rgba(8, 8, 214, 0.938);
 }
 .yt-icon:hover {
   color: red;
