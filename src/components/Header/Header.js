@@ -126,7 +126,7 @@ const Header = () => {
             </Nav>
             <span className="text-warning fw-bold ms-3 mt-1">
               <FontAwesomeIcon
-                className="font-icon me-2"
+                className="cart-icon me-2"
                 icon={faShoppingCart}
               ></FontAwesomeIcon>
               0

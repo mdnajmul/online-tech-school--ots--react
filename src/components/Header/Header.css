@@ -18,6 +18,10 @@
   cursor: pointer;
   color: white;
 }
+.cart-icon {
+  cursor: pointer;
+  color: #e4921f;
+}
 .fb-icon:hover {
   color: rgba(8, 8, 214, 0.938);
 }
