@@ -10,7 +10,7 @@ const Home = () => {
       .then((data) => setCourses(data));
   }, []);
   return (
-    <section className="container">
+    <section className="container mt-5">
       <div className="home-container">
         {courses.map((course) => (
           <Course key={course.id} course={course}></Course>

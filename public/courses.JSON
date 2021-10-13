@@ -5,7 +5,7 @@
     "description": "নতুনদের জন্যে আছে JavaScript ES6 এর ব্যাসিক বিষয় গুলি",
     "img": "https://rabbil.com/storage/es6.png",
     "rating": 5,
-    "class": 49,
+    "totalClass": 49,
     "price": 2500
   },
   {
@@ -14,7 +14,7 @@
     "description": "নতুনদের জন্যে আছে ধারাবাহিক নোড এক্সপ্রেস জেএস এর ব্যাসিক থেকে খুটি নাটি সব কিছু",
     "img": "https://rabbil.com/storage/Express.png",
     "rating": 4,
-    "class": 30,
+    "totalClass": 30,
     "price": 2000
   },
   {
@@ -23,7 +23,7 @@
     "description": "নতুনদের জন্যে আছে ধারাবাহিক নোড জেএস এর ব্যাসিক থেকে খুটি নাটি সব কিছু",
     "img": "https://rabbil.com/storage/node.png",
     "rating": 3,
-    "class": 98,
+    "totalClass": 98,
     "price": 4500
   },
   {
@@ -32,7 +32,7 @@
     "description": "নতুনদের জন্যে আছে JAVA OOP এর ব্যাসিক বিষয় গুলি",
     "img": "https://rabbil.com/storage/Java.png",
     "rating": 4,
-    "class": 21,
+    "totalClass": 21,
     "price": 1500
   },
   {
@@ -41,7 +41,7 @@
     "description": "নতুনদের জন্যে আছে ধারাবাহিক অ্যান্ড্রয়েড অ্যাপ ডেভেলপমেন্ট এর সব কিছু",
     "img": "https://rabbil.com/storage/Android.png",
     "rating": 5,
-    "class": 105,
+    "totalClass": 105,
     "price": 5000
   },
   {
@@ -50,7 +50,7 @@
     "description": "নতুনদের জন্যে আছে Dart Programming এর ব্যাসিক বিষয় গুলি",
     "img": "https://rabbil.com/storage/Dart.png",
     "rating": 4,
-    "class": 52,
+    "totalClass": 52,
     "price": 2200
   },
   {
@@ -59,7 +59,7 @@
     "description": "ব্যাসিক থেকে শুরু করে মোবাইল এপ ডেভেলপমেন্টের সব কিছু থাকছে স্টেপ বাই স্টেপ । তবে এই কোর্সে এখন পর্যন্ত প্রোজেক্ট যুক্ত করা হয়নি।",
     "img": "https://rabbil.com/storage/reactnative.png",
     "rating": 5,
-    "class": 155,
+    "totalClass": 155,
     "price": 5500
   },
   {
@@ -68,7 +68,7 @@
     "description": "সঠিক স্কিল তৈরির জন্যে এটি একটি পার্ফেক্ট কোর্স। স্টেপ বাই স্টেপ সঠিক প্রাক্টিক্যাল ক্লাস ভিডিও সহ থাকছে, একটি ফোন বুক ম্যানেজমেন্ট API Project",
     "img": "https://rabbil.com/storage/lumen.png",
     "rating": 4,
-    "class": 58,
+    "totalClass": 58,
     "price": 950
   },
   {
@@ -77,7 +77,7 @@
     "description": "স্টেপ বাই স্টেপ ব্যাসিক আলোচনা সহ আছে ২টি লাইভ প্রজেক্ট। বিগিনার থেকে এক্সপার্ট যে কেউ এই কোর্সটি করতে পারেন।",
     "img": "https://rabbil.com/storage/laravel.png",
     "rating": 5,
-    "class": 342,
+    "totalClass": 342,
     "price": 6000
   },
   {
@@ -86,7 +86,7 @@
     "description": "এই সিরিজে ই-কমার্স ওয়েব সাইটের সাথে থাকছে ই-কমার্স মোবাইল অ্যাপ। এছাড়া এখানে পেয়ে যাচ্ছেন Progressive Web App নিয়ে বিশেষ ক্লাস",
     "img": "https://rabbil.com/storage/Ecommerce.png",
     "rating": 4,
-    "class": 182,
+    "totalClass": 182,
     "price": 3000
   },
   {
@@ -95,7 +95,7 @@
     "description": "সোর্স কোড সব ওয়েব সাইট প্রোজেক্ট টিউটরিয়াল। সাথে লুমেন Rest API এবং নেক্সট জেএস এর ক্লাস পাচ্ছেন ফ্রিতে।",
     "img": "https://rabbil.com/storage/react.png",
     "rating": 4,
-    "class": 245,
+    "totalClass": 245,
     "price": 4000
   },
   {
@@ -104,7 +104,7 @@
     "description": "এই টিউটরিয়াল সিরিজে ব্রাউজার প্লাগিন ডেভেলপমেন্ট এর ব্যাসিক থেকে ৩টি কমপ্লিট প্রোজেক্ট দেখানো হয়েছে",
     "img": "https://rabbil.com/storage/browser.png",
     "rating": 4,
-    "class": 48,
+    "totalClass": 48,
     "price": 2000
   }
 ]

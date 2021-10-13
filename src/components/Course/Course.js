@@ -1,9 +1,10 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import Rating from "react-rating";
 import "./Course.css";
 
 const Course = (props) => {
-  const { name, description, img, rating, price } = props.course;
+  const { name, description, img, rating, price, totalClass } = props.course;
   return (
     <div className="course">
       <img src={img} className="img-fluid" alt="" />
@@ -20,7 +21,16 @@ const Course = (props) => {
           readonly
         ></Rating>
       </p>
-      <small>{price}</small>
+      <div className="d-flex justify-content-around">
+        <p>কোর্স ফি: {price} টাকা</p>
+        <p>ক্লাস: {totalClass} টি</p>
+      </div>
+      <p className="ps-3 pe-3">
+        <hr />
+      </p>
+      <p className="text-center">
+        <Button>কোর্স অ্যাড করুন</Button>
+      </p>
     </div>
   );
 };

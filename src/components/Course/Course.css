@@ -1,5 +1,9 @@
 .course {
   background-color: #fff;
+  border-radius: 10px;
+}
+.course img {
+  border-radius: 10px;
 }
 .icon-color {
   color: gold;
