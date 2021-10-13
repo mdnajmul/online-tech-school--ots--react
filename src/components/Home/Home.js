@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Course from "../Course/Course";
+import "./Home.css";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
@@ -9,12 +10,13 @@ const Home = () => {
       .then((data) => setCourses(data));
   }, []);
   return (
-    <div>
-      <h2>Home</h2>
-      {courses.map((course) => (
-        <Course key={course.id} course={course}></Course>
-      ))}
-    </div>
+    <section className="container">
+      <div className="home-container">
+        {courses.map((course) => (
+          <Course key={course.id} course={course}></Course>
+        ))}
+      </div>
+    </section>
   );
 };
 
