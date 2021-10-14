@@ -1,21 +1,34 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import Footer from "./components/Footer/Footer";
-import Slider from "./components/Slider/Slider";
 import Home from "./components/Home/Home";
+import Slider from "./components/Slider/Slider";
+import { createContext, useEffect, useState } from "react";
+
+export const CoursesContext = createContext([]);
 
 function App() {
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    fetch("./courses.JSON")
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
+  }, []);
+
   return (
-    <div className="App">
+    <CoursesContext.Provider value={courses}>
       <Router>
         <Header></Header>
-        <Slider></Slider>
-        <Home></Home>
+        <Switch>
+          <Route exact path="/">
+            <Slider></Slider>
+            <Home></Home>
+          </Route>
+        </Switch>
         <Footer></Footer>
       </Router>
-    </div>
+    </CoursesContext.Provider>
   );
 }
 
