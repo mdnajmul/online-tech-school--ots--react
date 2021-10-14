@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Slider from "./components/Slider/Slider";
 import { createContext, useEffect, useState } from "react";
 import Courses from "./components/Courses/Courses";
+import NotFound from "./components/NotFound/NotFound";
 
 export const CoursesContext = createContext([]);
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/courses">
             <Courses></Courses>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
