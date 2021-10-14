@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Slider from "./components/Slider/Slider";
 import { createContext, useEffect, useState } from "react";
+import Courses from "./components/Courses/Courses";
 
 export const CoursesContext = createContext([]);
 
@@ -24,6 +25,9 @@ function App() {
           <Route exact path="/">
             <Slider></Slider>
             <Home></Home>
+          </Route>
+          <Route path="/courses">
+            <Courses></Courses>
           </Route>
         </Switch>
         <Footer></Footer>

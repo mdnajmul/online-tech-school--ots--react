@@ -103,7 +103,7 @@ const Header = () => {
             <Nav className="me-0 fw-bold">
               <NavLink
                 className="text-decoration-none me-5 nav-menu-clr"
-                to="/home"
+                to="/"
                 active
               >
                 Home
