@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Button } from "react-bootstrap";
 import "./Cart.css";
 
 const Cart = (props) => {
@@ -25,6 +25,9 @@ const Cart = (props) => {
       <p className="text-center mt-1">
         <span className="text-info fw-bold">Total Cost:</span>{" "}
         <span className="fw-bold">{total} টাকা</span>
+      </p>
+      <p className="text-center">
+        <Button>Enroll Now</Button>
       </p>
     </div>
   );
