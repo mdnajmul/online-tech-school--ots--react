@@ -1,14 +1,12 @@
 import React from "react";
-import useCart from "../../hooks/useCart";
 import useCourses from "../../hooks/useCourses";
-import { getStoredCart, removeFromDb } from "../../utilities/fakeDb";
 import Review from "../Review/Review";
 import Cart from "../Cart/Cart";
 import "./OrderReview.css";
 
 const OrderReview = (props) => {
   // destructuring cart value
-  const { cart, removeToCart } = props;
+  const { cart, removeToCart, handlePlaceOrder } = props;
   const [courses, setCourses] = useCourses();
 
   const storedCart = [];
@@ -33,7 +31,7 @@ const OrderReview = (props) => {
             ))}
           </div>
           <div>
-            <Cart cart={storedCart}></Cart>
+            <Cart cart={storedCart} handlePlaceOrder={handlePlaceOrder}></Cart>
           </div>
         </div>
       ) : (

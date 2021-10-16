@@ -5,8 +5,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Course from "../Course/Course";
 import "./Home.css";
 import { CoursesContext } from "../../App";
-import useCart from "../../hooks/useCart";
-import { addToDb } from "../../utilities/fakeDb";
 
 const Home = (props) => {
   const { handleAddToCart } = props;

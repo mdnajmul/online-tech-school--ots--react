@@ -23,7 +23,6 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Header.css";
-import { getDb } from "../../utilities/fakeDb";
 
 // const cartItems = getDb();
 // console.log(cartItems);

@@ -5,6 +5,7 @@ import "./Cart.css";
 const Cart = (props) => {
   // destructuring cart value
   const { cart } = props;
+  const { handlePlaceOrder } = props;
 
   let quantity = props.cart.length;
   let total = 0;
@@ -27,7 +28,7 @@ const Cart = (props) => {
         <span className="fw-bold">{total} টাকা</span>
       </p>
       <p className="text-center">
-        <Button>Enroll Now</Button>
+        <Button onClick={() => handlePlaceOrder()}>Enroll Now</Button>
       </p>
     </div>
   );

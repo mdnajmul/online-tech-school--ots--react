@@ -1,17 +1,24 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Slider from "./components/Slider/Slider";
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import Courses from "./components/Courses/Courses";
 import NotFound from "./components/NotFound/NotFound";
 import useCart from "./hooks/useCart";
-import { addToDb, getStoredCart, removeFromDb } from "./utilities/fakeDb";
+import {
+  addToDb,
+  clearTheCart,
+  getStoredCart,
+  removeFromDb,
+} from "./utilities/fakeDb";
 import useCourses from "./hooks/useCourses";
 import OrderReview from "./components/OrderReview/OrderReview";
 import AboutUs from "./components/AboutUs/AboutUs";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
 
 export const CoursesContext = createContext([]);
 
@@ -35,6 +42,13 @@ function App() {
     removeFromDb(id);
   };
 
+  let history = useHistory();
+  const handlePlaceOrder = () => {
+    setCart([]);
+    clearTheCart();
+    history.push("/placeorder");
+  };
+
   const cartItems = Object.keys(getStoredCart());
 
   return (
@@ -53,10 +67,14 @@ function App() {
             <OrderReview
               cart={cartItems}
               removeToCart={removeToCart}
+              handlePlaceOrder={handlePlaceOrder}
             ></OrderReview>
           </Route>
           <Route path="/aboutus">
             <AboutUs></AboutUs>
+          </Route>
+          <Route path="/placeorder">
+            <PlaceOrder></PlaceOrder>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
