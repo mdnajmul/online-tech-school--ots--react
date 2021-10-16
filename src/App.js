@@ -30,7 +30,7 @@ function App() {
     if (!cart.includes(course)) {
       const newCart = [...cart, course];
       setCart(newCart);
-      // save to local storage (for now)
+      // save to local storage
       addToDb(course.id);
     } else {
       alert("Already added!");

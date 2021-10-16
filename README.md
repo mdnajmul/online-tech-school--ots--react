@@ -2,7 +2,7 @@
 
 ## Project Live Site
 
-- [Go To Here](https://make-development-team-react-najmul-ovi.netlify.app/).
+- [Go To Here](https://ots-react-najmulovi.netlify.app/).
 
 ## Project Description
 

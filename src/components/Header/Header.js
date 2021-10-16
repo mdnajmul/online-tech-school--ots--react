@@ -24,10 +24,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./Header.css";
 
-// const cartItems = getDb();
-// console.log(cartItems);
-// const cartSize = Object.keys(cartItems).length;
-
 const Header = (props) => {
   let quantity = props.cart.length;
   return (
