@@ -8,17 +8,15 @@ import { createContext, useEffect, useState } from "react";
 import Courses from "./components/Courses/Courses";
 import NotFound from "./components/NotFound/NotFound";
 import useCart from "./hooks/useCart";
-import { addToDb, getStoredCart } from "./utilities/fakeDb";
+import { addToDb, getStoredCart, removeFromDb } from "./utilities/fakeDb";
+import useCourses from "./hooks/useCourses";
+import OrderReview from "./components/OrderReview/OrderReview";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 export const CoursesContext = createContext([]);
 
 function App() {
-  const [courses, setCourses] = useState([]);
-  useEffect(() => {
-    fetch("./courses.JSON")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
+  const [courses, setCourses] = useCourses();
   const [cart, setCart] = useCart(courses);
   const handleAddToCart = (course) => {
     if (!cart.includes(course)) {
@@ -30,7 +28,14 @@ function App() {
       alert("Already added!");
     }
   };
-  const cartItems = Object.entries(getStoredCart());
+
+  const removeToCart = (id) => {
+    const newCart = cart.filter((course) => course.id !== id);
+    setCart(newCart);
+    removeFromDb(id);
+  };
+
+  const cartItems = Object.keys(getStoredCart());
 
   return (
     <CoursesContext.Provider value={courses}>
@@ -43,6 +48,15 @@ function App() {
           </Route>
           <Route path="/courses">
             <Courses handleAddToCart={handleAddToCart}></Courses>
+          </Route>
+          <Route path="/orderreview">
+            <OrderReview
+              cart={cartItems}
+              removeToCart={removeToCart}
+            ></OrderReview>
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs></AboutUs>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

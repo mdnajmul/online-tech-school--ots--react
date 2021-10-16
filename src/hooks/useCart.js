@@ -9,7 +9,7 @@ const useCart = (courses) => {
       const savedCart = getStoredCart();
       const storedCart = [];
       for (const key in savedCart) {
-        const addedCourse = courses.find((course) => course.key === key);
+        const addedCourse = courses.find((course) => course.id === key);
         if (addedCourse) {
           storedCart.push(addedCourse);
         }

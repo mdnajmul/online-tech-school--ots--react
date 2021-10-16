@@ -30,8 +30,6 @@ import { getDb } from "../../utilities/fakeDb";
 // const cartSize = Object.keys(cartItems).length;
 
 const Header = (props) => {
-  // destructuring cart value
-  const { cart } = props;
   let quantity = props.cart.length;
   return (
     <div>
@@ -124,20 +122,28 @@ const Header = (props) => {
               </NavLink>
               <NavLink
                 className="text-decoration-none me-5 nav-menu-clr"
-                to="/about"
+                to="/orderreview"
+              >
+                Order Review
+              </NavLink>
+              <NavLink
+                className="text-decoration-none nav-menu-clr"
+                to="/aboutus"
               >
                 About Us
               </NavLink>
-              <NavLink className="text-decoration-none nav-menu-clr" to="/shop">
-                Shop
-              </NavLink>
             </Nav>
             <span className="text-warning fw-bold ms-3 mt-1">
-              <FontAwesomeIcon
-                className="cart-icon me-2"
-                icon={faShoppingCart}
-              ></FontAwesomeIcon>
-              {quantity}
+              <NavLink
+                className="text-decoration-none text-warning"
+                to="/orderreview"
+              >
+                <FontAwesomeIcon
+                  className="cart-icon me-2"
+                  icon={faShoppingCart}
+                ></FontAwesomeIcon>
+                {quantity}
+              </NavLink>
             </span>
           </Container>
         </Navbar>
