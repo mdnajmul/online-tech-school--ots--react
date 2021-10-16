@@ -25,6 +25,7 @@ export const CoursesContext = createContext([]);
 function App() {
   const [courses, setCourses] = useCourses();
   const [cart, setCart] = useCart(courses);
+  let history = useHistory();
   const handleAddToCart = (course) => {
     if (!cart.includes(course)) {
       const newCart = [...cart, course];
@@ -42,11 +43,9 @@ function App() {
     removeFromDb(id);
   };
 
-  let history = useHistory();
   const handlePlaceOrder = () => {
     setCart([]);
     clearTheCart();
-    history.push("/placeorder");
   };
 
   const cartItems = Object.keys(getStoredCart());
