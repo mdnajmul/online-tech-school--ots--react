@@ -3,7 +3,8 @@ import { CoursesContext } from "../../App";
 import Course from "../Course/Course";
 import "./Courses.css";
 
-const Courses = () => {
+const Courses = (props) => {
+  const { handleAddToCart } = props;
   const allCourses = useContext(CoursesContext);
   return (
     <section className="container mt-3">
@@ -13,7 +14,11 @@ const Courses = () => {
       </h3>
       <div className="course-container">
         {allCourses.map((course) => (
-          <Course key={course.id} course={course}></Course>
+          <Course
+            key={course.id}
+            course={course}
+            handleAddToCart={handleAddToCart}
+          ></Course>
         ))}
       </div>
     </section>

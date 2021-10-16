@@ -7,6 +7,8 @@ import Slider from "./components/Slider/Slider";
 import { createContext, useEffect, useState } from "react";
 import Courses from "./components/Courses/Courses";
 import NotFound from "./components/NotFound/NotFound";
+import useCart from "./hooks/useCart";
+import { addToDb, getStoredCart } from "./utilities/fakeDb";
 
 export const CoursesContext = createContext([]);
 
@@ -17,18 +19,30 @@ function App() {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
+  const [cart, setCart] = useCart(courses);
+  const handleAddToCart = (course) => {
+    if (!cart.includes(course)) {
+      const newCart = [...cart, course];
+      setCart(newCart);
+      // save to local storage (for now)
+      addToDb(course.id);
+    } else {
+      alert("Already added!");
+    }
+  };
+  const cartItems = Object.entries(getStoredCart());
 
   return (
     <CoursesContext.Provider value={courses}>
       <Router>
-        <Header></Header>
+        <Header cart={cartItems}></Header>
         <Switch>
           <Route exact path="/">
             <Slider></Slider>
-            <Home></Home>
+            <Home handleAddToCart={handleAddToCart}></Home>
           </Route>
           <Route path="/courses">
-            <Courses></Courses>
+            <Courses handleAddToCart={handleAddToCart}></Courses>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

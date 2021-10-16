@@ -5,10 +5,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Course from "../Course/Course";
 import "./Home.css";
 import { CoursesContext } from "../../App";
+import useCart from "../../hooks/useCart";
+import { addToDb } from "../../utilities/fakeDb";
 
-const Home = () => {
+const Home = (props) => {
+  const { handleAddToCart } = props;
   const allCourses = useContext(CoursesContext);
   const homeCourses = allCourses.slice(0, 6);
+
   return (
     <section className="container mt-5">
       <div className="d-flex justify-content-between mb-3">
@@ -21,7 +25,11 @@ const Home = () => {
       </div>
       <div className="home-container">
         {homeCourses.map((course) => (
-          <Course key={course.id} course={course}></Course>
+          <Course
+            id={course.id}
+            course={course}
+            handleAddToCart={handleAddToCart}
+          ></Course>
         ))}
       </div>
     </section>

@@ -23,8 +23,16 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Header.css";
+import { getDb } from "../../utilities/fakeDb";
 
-const Header = () => {
+// const cartItems = getDb();
+// console.log(cartItems);
+// const cartSize = Object.keys(cartItems).length;
+
+const Header = (props) => {
+  // destructuring cart value
+  const { cart } = props;
+  let quantity = props.cart.length;
   return (
     <div>
       <div className="d-flex justify-content-between top-nav">
@@ -129,7 +137,7 @@ const Header = () => {
                 className="cart-icon me-2"
                 icon={faShoppingCart}
               ></FontAwesomeIcon>
-              0
+              {quantity}
             </span>
           </Container>
         </Navbar>

@@ -29,7 +29,9 @@ const Course = (props) => {
         <hr />
       </p>
       <p className="text-center">
-        <Button>কোর্স অ্যাড করুন</Button>
+        <Button onClick={() => props.handleAddToCart(props.course)}>
+          কোর্স অ্যাড করুন
+        </Button>
       </p>
     </div>
   );
